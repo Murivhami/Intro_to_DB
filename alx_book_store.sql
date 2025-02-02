@@ -26,8 +26,15 @@ CREATE TABLE IF NOT EXISTS Books (
   publication_date DATE
 )
 """)
-
-print("Books table created successfully")
+#create authors table
+mycursor.execute("""
+CREATE TABLE IF NOT EXISTS Authors (
+  author_id INT AUTO_INCREMENT PRIMARY KEY,
+  author_name VARCHAR(130)
+)
+""")
+    
+print("Tables created successfully")
 
 # Close the connection
 mycursor.close()
