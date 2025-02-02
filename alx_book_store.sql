@@ -44,7 +44,22 @@ CREATE TABLE IF NOT EXISTS Customers (
                  
 )
 """)
-    
+#create orders table
+mycursor.execute("""
+CREATE TABLE IF NOT EXISTS Orders (
+  order_id INT AUTO_INCREMENT PRIMARY KEY,
+                 Order_date DATE
+)
+""")
+
+#create order detail table
+mycursor.execute("""
+CREATE TABLE IF NOT EXISTS Order_Details (
+  order_detail_id INT AUTO_INCREMENT PRIMARY KEY,
+                 quantity DOUBLE
+)
+""")
+
 print("Tables created successfully")
 
 # Close the connection
