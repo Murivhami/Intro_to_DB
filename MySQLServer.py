@@ -3,7 +3,7 @@
 import mysql.connector
 from mysql.connector import Error
 
-# Database connection details (replace with your own)
+# Database connection details
 try:
     mydb = mysql.connector.connect(
         host="localhost",
@@ -13,7 +13,7 @@ try:
     
     mycursor = mydb.cursor()
 
-# Create a database named `alx_book_store` (if it doesn't exist)
+# Create a database named `alx_book_store`
     mycursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
     print("Database alx book store created successfully!")
 
