@@ -1,9 +1,18 @@
 #!/bin/bash
 
-SELECT book_id INT AUTO_INCREMENT PRIMARY KEY,
-  title VARCHAR(130),
-  author_id INT,
-  price DOUBLE,
-  publication_date DATE
-    from Books;
 USE alx_book_store;
+
+SELECT 
+    COLUMN_NAME,
+    DATA_TYPE,
+    IS_NULLABLE,
+    COLUMN_DEFAULT,
+    CHARACTER_MAXIMUM_LENGTH,
+    NUMERIC_PRECISION,
+    NUMERIC_SCALE
+FROM 
+    INFORMATION_SCHEMA.COLUMNS
+WHERE 
+    TABLE_SCHEMA = 'alx_book_store' 
+    AND TABLE_NAME = 'Books';
+
